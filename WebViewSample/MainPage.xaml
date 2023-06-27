@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WebViewSample.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:models="clr-namespace:WebViewSample.Models"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <CollectionView
+                ItemsSource="{Binding WebsiteList}"
+                SelectedItem="{Binding SelectedWebsite}"
+                SelectionChangedCommand="{Binding SelectionChangedCommand}"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:WebSiteModel">
+                        <StackLayout>
+                            <Grid HorizontalOptions="Center" Margin="0,10,0,10">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="22"
+                                    Text="{Binding Title}" />
+                            </Grid>
+                            <BoxView
+                                Color="Black"
+                                HeightRequest="1"
+                                HorizontalOptions="FillAndExpand"
+                                Margin="0,10,0,10" />
+                            <Grid HorizontalOptions="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Frame
+                                    CornerRadius="20"
+                                    Margin="10"
+                                    Padding="5">
+                                    <WebView
+                                        HeightRequest="200"
+                                        Source="{Binding Url}"
+                                        WidthRequest="200" />
+                                </Frame>
+                            </Grid>
+                            <Grid HorizontalOptions="Center" Margin="10">
+                                <Border Stroke="#808080" StrokeThickness="3">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="10,10,10,10" />
+                                    </Border.StrokeShape>
+                                    <Label
+                                        FontAttributes="Italic"
+                                        FontSize="16"
+                                        HorizontalTextAlignment="Center"
+                                        LineBreakMode="WordWrap"
+                                        Padding="15"
+                                        Text="{Binding Description}" />
+                                </Border>
+                            </Grid>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

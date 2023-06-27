@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebViewSample", "WebViewSample\WebViewSample.csproj", "{A717998A-E745-4052-B54E-1E4D279E0FE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A717998A-E745-4052-B54E-1E4D279E0FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A717998A-E745-4052-B54E-1E4D279E0FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A717998A-E745-4052-B54E-1E4D279E0FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A717998A-E745-4052-B54E-1E4D279E0FE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
